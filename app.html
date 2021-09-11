@@ -9,24 +9,24 @@
     </head>
     <body ng-app="Todo">
         <div ng-controller="controller">
-            <h3>Things I need to do:</h3>
-            <div ng-repeat="item in todo.list">
-                <li>{{ item }}</li>
-            </div>
+
+            <single-list mylist="todo"></single-list>
             <input ng-model="addTodo">
             <button ng-click="addItem(todo.list, addTodo)">Add This To-Do</button>
 
-            <h3>Books I need to buy</h3>
-            <div ng-repeat="book in books.list">
-                <li>{{ book }}</li>
-            </div>
+            <single-list mylist="books"></single-list>
             <input ng-model="addBook">
             <button ng-click="addItem(books.list, addBook)">Add This Book</button>
 
         </div>
+
         <!-- Include Module -->
         <script src="app.js"></script>
+
         <!-- Include Controller -->
         <script src="controller.js"></script>
+
+        <!-- Include Directive -->
+        <script src="singleList.js"></script>
     </body>
 </html>
