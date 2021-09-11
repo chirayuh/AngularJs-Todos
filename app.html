@@ -5,18 +5,25 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <link rel="icon" type="image/png" href="images/angularjs-2749227-2284617.png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/app.css">
         <title>Todo</title>
     </head>
     <body ng-app="Todo">
         <div ng-controller="controller">
 
             <single-list mylist="todo"></single-list>
-            <input ng-model="addTodo">
-            <button ng-click="addItem(todo.list, addTodo)">Add This To-Do</button>
+            <input ng-model="addTodo" class="form-control" >
+            <br><br>
+            <button ng-click="addItem(todo.list, addTodo)" class="btn btn-primary" >Add This To-Do</button>
 
             <single-list mylist="books"></single-list>
-            <input ng-model="addBook">
-            <button ng-click="addItem(books.list, addBook)">Add This Book</button>
+            <input ng-model="addBook" class="form-control" >
+            <br><br>
+            <button ng-click="addItem(books.list, addBook)" class="btn btn-primary">Add This Book</button>
 
         </div>
 
