@@ -7,10 +7,17 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
         <title>Todo</title>
     </head>
-    <body>
-        <div ng-app="Todo">
-
+    <body ng-app="Todo">
+        <div ng-controller="controller">
+            <div ng-repeat="item in list">
+                <li>{{ item }}</li>
+            </div>
+            <input ng-model="addTodo">
+            <button ng-click="addItem()">Add This To-Do</button>
         </div>
+        <!-- Include Module -->
         <script src="app.js"></script>
+        <!-- Include Controller -->
+        <script src="controller.js"></script>
     </body>
 </html>
