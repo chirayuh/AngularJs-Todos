@@ -4,6 +4,6 @@ app.directive('singleList', function() {
         scope: {
             mylist: '='
         },
-        templateUrl: 'singleList.html'
+        templateUrl: 'js/directives/singleList.html'
     }
 })
